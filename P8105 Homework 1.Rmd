@@ -1,0 +1,39 @@
+---
+title: "P8105 Homework 1"
+author: "Laylah Jones"
+date: 2023-09-21
+output: github_document
+---
+
+```{r}
+library(tidyverse)
+
+library(moderndive)
+```
+
+# Problem 1
+
+```{r}
+# Accessing dataset information
+
+data("early_january_weather")
+nrow(early_january_weather)
+ncol(early_january_weather)
+```
+
+
+```{r}
+# Finding the mean
+
+mean(pull(early_january_weather, temp))
+```
+
+
+The structure of the dataset is looking at the meteorological weather during early January. The 15 variables included are origin, year, month, day, hour, temperature, dew point, humidity, wind direction, wind speed, wind gust, precipitation, pressure, visibility, and the time hour. The values of important values are the ones that are dependent and changing in the dataset such as temp, dewp, humid, wind_dir, wind_speed, wind_gust, and pressure. However, the important value that we are focusing on now is the temperature. The dataset has 358 rows and 15 columns. The mean is 39.58212. 
+
+```{r}
+# Making a scatter plot
+
+ggplot(early_january_weather, aes(x = time_hour, y = temp, color = humid)) + geom_point()
+```
+
