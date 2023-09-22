@@ -53,7 +53,7 @@ hw_df =
   tibble(
     vec_numeric = rnorm(10),
     vec_char = c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
-    vec_factor = factor(c("High", "High", "Low", "Medium", "Medium", "Low", "High", "Low", "Low", "Low"))
+    vec_factor = factor(c("High", "High", "Low", "Medium", "Medium", "Low", "High", "Low", "Low", "Low")),
   )
 hw_df
 ```

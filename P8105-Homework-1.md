@@ -84,21 +84,22 @@ hw_df =
   tibble(
     vec_numeric = rnorm(10),
     vec_char = c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
-    vec_factor = factor(c("High", "High", "Low", "Medium", "Medium", "Low", "High", "Low", "Low", "Low"))
+    vec_factor = factor(c("High", "High", "Low", "Medium", "Medium", "Low", "High", "Low", "Low", "Low")),
+    vec_logic = vec_numeric > 0
   )
 hw_df
 ```
 
-    ## # A tibble: 10 × 3
-    ##    vec_numeric vec_char vec_factor
-    ##          <dbl>    <dbl> <fct>     
-    ##  1      -0.648        1 High      
-    ##  2      -0.771        2 High      
-    ##  3      -0.548        3 Low       
-    ##  4       0.500        4 Medium    
-    ##  5      -1.50         5 Medium    
-    ##  6       0.131        6 Low       
-    ##  7      -1.26         7 High      
-    ##  8       0.947        8 Low       
-    ##  9       0.888        9 Low       
-    ## 10      -1.50        10 Low
+    ## # A tibble: 10 × 4
+    ##    vec_numeric vec_char vec_factor vec_logic
+    ##          <dbl>    <dbl> <fct>      <lgl>    
+    ##  1      -1.29         1 High       FALSE    
+    ##  2       0.336        2 High       TRUE     
+    ##  3       0.553        3 Low        TRUE     
+    ##  4       0.951        4 Medium     TRUE     
+    ##  5       0.206        5 Medium     TRUE     
+    ##  6       0.715        6 Low        TRUE     
+    ##  7      -0.605        7 High       FALSE    
+    ##  8      -0.698        8 Low        FALSE    
+    ##  9      -0.637        9 Low        FALSE    
+    ## 10      -1.45        10 Low        FALSE
