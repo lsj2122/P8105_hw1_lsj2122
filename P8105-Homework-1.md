@@ -1,7 +1,7 @@
 P8105 Homework 1
 ================
 Laylah Jones
-2023-09-21
+2023-09-22
 
 ``` r
 library(tidyverse)
@@ -25,7 +25,7 @@ library(moderndive)
 # Problem 1
 
 ``` r
-# Accessing dataset information
+# Accessing dataset information.
 
 data("early_january_weather")
 nrow(early_january_weather)
@@ -40,7 +40,7 @@ ncol(early_january_weather)
     ## [1] 15
 
 ``` r
-# Finding the mean
+# Finding the mean.
 
 mean(pull(early_january_weather, temp))
 ```
@@ -58,7 +58,7 @@ focusing on now is the temperature. The dataset has 358 rows and 15
 columns. The mean is 39.58212.
 
 ``` r
-# Making a scatter plot
+# Making a scatter plot.
 
 ggplot(early_january_weather, aes(x = time_hour, y = temp, color = humid)) + geom_point()
 ```
@@ -78,7 +78,7 @@ ggsave("early_january_weather.pdf")
 # Problem 2
 
 ``` r
-# This code chunk creates a data frame 
+# Creating a data frame. 
 
 hw_df = 
   tibble(
@@ -93,13 +93,21 @@ hw_df
     ## # A tibble: 10 × 4
     ##    vec_numeric vec_char vec_factor vec_logic
     ##          <dbl>    <dbl> <fct>      <lgl>    
-    ##  1      -1.29         1 High       FALSE    
-    ##  2       0.336        2 High       TRUE     
-    ##  3       0.553        3 Low        TRUE     
-    ##  4       0.951        4 Medium     TRUE     
-    ##  5       0.206        5 Medium     TRUE     
-    ##  6       0.715        6 Low        TRUE     
-    ##  7      -0.605        7 High       FALSE    
-    ##  8      -0.698        8 Low        FALSE    
-    ##  9      -0.637        9 Low        FALSE    
-    ## 10      -1.45        10 Low        FALSE
+    ##  1      -0.267        1 High       FALSE    
+    ##  2      -2.10         2 High       FALSE    
+    ##  3       0.771        3 Low        TRUE     
+    ##  4      -0.877        4 Medium     FALSE    
+    ##  5      -0.500        5 Medium     FALSE    
+    ##  6       0.438        6 Low        TRUE     
+    ##  7       0.262        7 High       TRUE     
+    ##  8      -1.92         8 Low        FALSE    
+    ##  9       1.36         9 Low        TRUE     
+    ## 10       0.313       10 Low        TRUE
+
+``` r
+# Now I will find the mean of each variable in the dataframe.
+
+mean(pull(hw_df, vec_numeric))
+```
+
+    ## [1] -0.2525495
