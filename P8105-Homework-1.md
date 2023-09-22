@@ -100,16 +100,16 @@ hw_df
     ## # A tibble: 10 × 4
     ##    vec_numeric vec_char vec_factor vec_logic
     ##          <dbl>    <dbl> <fct>      <lgl>    
-    ##  1      -1.34         1 High       FALSE    
-    ##  2      -1.73         2 High       FALSE    
-    ##  3      -0.177        3 Low        FALSE    
-    ##  4      -0.192        4 Medium     FALSE    
-    ##  5       0.331        5 Medium     TRUE     
-    ##  6       0.864        6 Low        TRUE     
-    ##  7       0.888        7 High       TRUE     
-    ##  8      -0.987        8 Low        FALSE    
-    ##  9       0.586        9 Low        TRUE     
-    ## 10      -1.56        10 Low        FALSE
+    ##  1       1.23         1 High       TRUE     
+    ##  2       0.145        2 High       TRUE     
+    ##  3      -0.944        3 Low        FALSE    
+    ##  4      -1.42         4 Medium     FALSE    
+    ##  5      -0.723        5 Medium     FALSE    
+    ##  6       1.48         6 Low        TRUE     
+    ##  7       0.304        7 High       TRUE     
+    ##  8       1.41         8 Low        TRUE     
+    ##  9       0.346        9 Low        TRUE     
+    ## 10      -0.518       10 Low        FALSE
 
 ``` r
 # Now I will find the mean of each variable in the dataframe.
@@ -117,30 +117,14 @@ hw_df
 mean(pull(hw_df, vec_numeric))
 ```
 
-    ## [1] -0.3320828
+    ## [1] 0.1314883
 
 ``` r
 # This code chunk applies the as.numeric function to the logical, character, and factor variables.
 
 as.numeric(pull(hw_df, vec_char))
-```
-
-    ##  [1]  1  2  3  4  5  6  7  8  9 10
-
-``` r
 as.numeric(pull(hw_df, vec_factor))
-```
-
-    ##  [1] 1 1 2 3 3 2 1 2 2 2
-
-``` r
 as.numeric(pull(hw_df, vec_logic))
-```
-
-    ##  [1] 0 0 0 0 1 1 1 0 1 0
-
-``` r
-eval = FALSE
 ```
 
 When I ran the as.numeric function, it converted the logical, character,
